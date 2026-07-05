@@ -6,26 +6,16 @@
     <title>Prestigio Navigator Hub</title>
     <style>
         :root { --primary: #2563eb; --accent: #f59e0b; --bg: #f0f2f5; --card: #ffffff; --text: #1e293b; }
-        body { font-family: 'Segoe UI', Tahoma, sans-serif; background: var(--bg); color: var(--text); padding: 20px; line-height: 1.6; }
+        body { font-family: 'Segoe UI', Tahoma, sans-serif; background: var(--bg); color: #1e293b; padding: 20px; line-height: 1.6; }
         .container { max-width: 900px; margin: auto; }
-        
         header { text-align: center; margin-bottom: 40px; }
-        h1 { color: var(--primary); margin-bottom: 5px; }
-        .status-badge { background: #dcfce7; color: #166534; padding: 5px 15px; border-radius: 20px; font-size: 0.9em; font-weight: bold; }
-        
+        h1 { color: #2563eb; margin-bottom: 5px; }
         .menu-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; margin-bottom: 30px; }
-        .card { background: var(--card); padding: 25px; border-radius: 16px; text-align: center; text-decoration: none; color: var(--text); box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); transition: 0.3s; }
-        .card:hover { transform: translateY(-10px); box-shadow: 0 10px 15px -3px rgba(0,0,0,0.2); border: 2px solid var(--primary); }
+        .card { background: #ffffff; padding: 25px; border-radius: 16px; text-align: center; text-decoration: none; color: #1e293b; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); transition: 0.3s; display: block; }
+        .card:hover { transform: translateY(-5px); box-shadow: 0 10px 15px -3px rgba(0,0,0,0.2); border: 2px solid #2563eb; }
         .icon { font-size: 50px; display: block; margin-bottom: 15px; }
-        
-        .content-box { background: var(--card); padding: 30px; border-radius: 16px; margin-bottom: 20px; box-shadow: 0 2px 4px rgba(0,0,0,0.05); }
-        .info-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
-        
-        .contact-btn { display: inline-block; background: var(--primary); color: #fff; padding: 10px 20px; border-radius: 8px; text-decoration: none; font-weight: bold; margin-top: 10px; margin-right: 10px; }
-        .tg-btn { background: #0ea5e9; }
-        
-        h2 { color: var(--primary); margin-top: 0; }
-        code { background: #f1f5f9; padding: 2px 6px; border-radius: 4px; border: 1px solid #e2e8f0; }
+        .content-box { background: #ffffff; padding: 30px; border-radius: 16px; margin-bottom: 20px; box-shadow: 0 2px 4px rgba(0,0,0,0.05); }
+        .btn { display: inline-block; background: #2563eb; color: #fff; padding: 12px 24px; border-radius: 8px; text-decoration: none; font-weight: bold; margin-top: 15px; }
         img { width: 45%; border-radius: 12px; border: 2px solid #ddd; margin: 5px; }
     </style>
 </head>
@@ -34,70 +24,56 @@
 <div class="container">
     <header>
         <h1>Prestigio Navigator Hub</h1>
-        <div class="status-badge">Разрешение экрана: 800x480 (Оптимизировано)</div>
     </header>
 
     <div class="menu-grid">
-        <a href="https://h1.nu/1yv3t" target="_blank" class="card">
+        <a href="#win10-section" class="card">
             <span class="icon">🖥️</span>
             <h3>Win10 Menu</h3>
-            <p>Оболочка Windows 10 для устройств WinCE.</p>
+            <p>Оболочка в стиле Windows 10.</p>
         </a>
-
-        <a href="https://disk.yandex.com/d/Acelb-BgTokMf" target="_blank" class="card">
+        <a href="#alt-menu-section" class="card">
             <span class="icon">⚙️</span>
             <h3>Альтернативное меню</h3>
-            <p>Продвинутая сборка для WinCE (800x480).</p>
+            <p>Продвинутая сборка (800x480).</p>
         </a>
-
         <a href="https://goo.su/OXmXUDY" target="_blank" class="card">
             <span class="icon">🚗</span>
             <h3>7 Дорог</h3>
-            <p>Стабильная навигация с поддержкой скинов.</p>
+            <p>Стабильная навигация.</p>
         </a>
-
-        <a href="https://goo.su/QT1rP" target="_blank" class="card">
+        <a href="https://megamaps.org" target="_blank" class="card">
             <span class="icon">🗺️</span>
-            <h3>Карты 7 дорог и navitel</h3>
-            <p>Актуальные картографические данные.</p>
+            <h3>Карты 7 дорог</h3>
+            <p>Скачать с megamaps.org</p>
         </a>
     </div>
 
-    <div class="content-box">
+    <!-- Раздел Win10 -->
+    <div id="win10-section" class="content-box">
+        <h2>🖥️ Оболочка Windows 10</h2>
+        <p>Современный интерфейс для устройств WinCE.</p>
+        <a href="https://h1.nu/1yv3t" target="_blank" class="btn">Скачать Win10 Menu</a>
+    </div>
+
+    <!-- Раздел Альтернативного меню -->
+    <div id="alt-menu-section" class="content-box">
         <h2>📂 Альтернативное меню WinCE (800x480)</h2>
         <div style="text-align: center;">
             <img src="https://i27.fastpic.org/big/2011/1127/cf/f9bdf871f91e1fd84659f1972ee59ecf.jpg" alt="Меню 1">
             <img src="https://i27.fastpic.org/big/2011/1127/71/5cd3203e54407f051008c406c260b771.jpg" alt="Меню 2">
         </div>
-        <p>Гибкая настройка, 15 страниц, поддержка категорий и легкая установка.</p>
-        <a href="https://disk.yandex.com/d/Acelb-BgTokMf" target="_blank" class="contact-btn">Скачать файлы</a>
-    </div>
-
-    <div class="info-grid">
-        <div class="content-box">
-            <h2>⚙️ Техническая справка</h2>
-            <p><strong>COM-порт:</strong> Обычно COM1 или COM7</p>
-            <p><strong>Скорость (Baud Rate):</strong> 4800 или 9600</p>
-            <p><strong>Система:</strong> Windows CE 5.0 / 6.0</p>
-            <p><strong>Установка:</strong> Укажите путь к <code>menu.exe</code> в настройках («Путь навигации»).</p>
-        </div>
-        <div class="content-box">
-            <h2>📢 Поделиться информацией</h2>
-            <p>Нашел новую сборку или свежие карты? Присылай, и я добавлю это на сайт для всех!</p>
-            <a href="https://t.me/Lubluprestigio_bot" class="contact-btn tg-btn">Прислать в Telegram</a>
-        </div>
-    </div>
-
-    <div class="content-box">
-        <h2>🚀 Последние обновления и планы</h2>
         <ul>
-            <li><strong>05.07.2026:</strong> Добавлено альтернативное меню WinCE (800x480) с визуализацией.</li>
-            <li><strong>В разработке:</strong> Поддержка разрешения 480x272.</li>
+            <li>15 страниц контента.</li>
+            <li>Главное меню + меню программ с категориями.</li>
+            <li>Кастомный значок перезагрузки.</li>
+            <li>Полная свобода настроек.</li>
         </ul>
+        <a href="https://disk.yandex.com/d/Acelb-BgTokMf" target="_blank" class="btn">Скачать файлы</a>
     </div>
 
-    <footer style="text-align: center; margin-top: 40px; padding: 20px; color: #64748b; font-size: 0.9em;">
-        <p>Сервис сделан <a href="https://sites.google.com/view/rusinovcompany" target="_blank" style="color: var(--primary); text-decoration: none; font-weight: bold;">Rusinov Company</a></p>
+    <footer style="text-align: center; margin-top: 40px; color: #64748b;">
+        <p>Сервис сделан <a href="https://sites.google.com/view/rusinovcompany" target="_blank" style="color: #2563eb; text-decoration: none; font-weight: bold;">Rusinov Company</a></p>
     </footer>
 </div>
 
