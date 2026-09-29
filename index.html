@@ -5,90 +5,87 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Молнія ТВ — Прямий ефір</title>
     <style>
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
         body {
-            background-color: #0b0b0e;
+            background-color: #0f1016;
             color: #ffffff;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
             display: flex;
             flex-direction: column;
             align-items: center;
+            justify-content: center;
             min-height: 100vh;
-            padding: 20px;
-        }
-        header {
-            text-align: center;
-            margin-bottom: 20px;
-        }
-        .logo {
-            font-size: 2.8rem;
-            font-weight: 900;
-            color: #ffde00;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            text-shadow: 0 0 15px rgba(255, 222, 0, 0.5);
-        }
-        .tagline {
-            color: #8a8a93;
-            font-size: 1rem;
-            margin-top: 5px;
+            margin: 0;
+            padding: 10px;
+            box-sizing: border-box;
         }
         .container {
             width: 100%;
-            max-width: 900px;
-            background: #16161c;
-            border-radius: 14px;
+            max-width: 800px;
+            background: #181b24;
+            border-radius: 16px;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.5);
             overflow: hidden;
-            border: 2px solid #23232f;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.8);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-bottom: 20px;
+        }
+        .header {
+            text-align: center;
+            padding: 20px 10px 10px 10px;
+        }
+        .logo {
+            font-size: 28px;
+            font-weight: 800;
+            color: #ffd700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 5px;
+        }
+        .subtitle {
+            color: #94a3b8;
+            font-size: 14px;
         }
         .player-box {
-            position: relative;
             width: 100%;
-            padding-bottom: 56.25%; /* Пропорция 16:9 */
+            aspect-ratio: 16/9;
             background: #000;
+            position: relative;
         }
-        .player-box iframe, .player-box video {
-            position: absolute;
-            top: 0;
-            left: 0;
+        .player-box iframe {
             width: 100%;
             height: 100%;
             border: none;
         }
-        .info-panel {
-            padding: 20px;
+        .footer-action {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            flex-wrap: wrap;
-            gap: 15px;
-            background: #1a1a24;
-            border-top: 1px solid #282836;
+            width: 90%;
+            margin-top: 15px;
+            padding: 0 10px;
         }
-        .status-badge {
+        .live-badge {
             display: flex;
             align-items: center;
-            gap: 8px;
-            font-weight: bold;
-            color: #ff3b3b;
+            color: #ff3b30;
+            font-weight: 700;
+            font-size: 14px;
         }
         .live-dot {
-            width: 12px;
-            height: 12px;
-            background-color: #ff3b3b;
+            width: 10px;
+            height: 10px;
+            background-color: #ff3b30;
             border-radius: 50%;
-            box-shadow: 0 0 10px #ff3b3b;
+            display: inline-block;
+            margin-right: 8px;
+            box-shadow: 0 0 8px #ff3b30;
             animation: pulse 1.5s infinite;
         }
         @keyframes pulse {
-            0% { transform: scale(0.95); opacity: 0.8; }
-            50% { transform: scale(1.2); opacity: 1; }
-            100% { transform: scale(0.95); opacity: 0.8; }
+            0% { opacity: 1; }
+            50% { opacity: 0.4; }
+            100% { opacity: 1; }
         }
         .btn {
             background-color: #0088cc;
@@ -96,46 +93,45 @@
             padding: 10px 20px;
             border-radius: 8px;
             text-decoration: none;
-            font-weight: bold;
+            font-weight: 600;
+            font-size: 14px;
             transition: background 0.2s;
         }
         .btn:hover {
             background-color: #0077b3;
         }
-        footer {
-            margin-top: 30px;
-            color: #555562;
-            font-size: 0.9rem;
+        .copyright {
+            margin-top: 20px;
+            color: #64748b;
+            font-size: 12px;
             text-align: center;
         }
     </style>
 </head>
 <body>
 
-    <header>
-        <div class="logo">⚡ Молнія ТВ</div>
-        <div class="tagline">Цілодобовий анімаційний телеканал</div>
-    </header>
-
     <div class="container">
-        <!-- Блок плеера с трансляцией -->
-        <div class="player-box">
-            <!-- Ссылка на встраивание трансляции из вашего Telegram-канала -->
-            <iframe src="https://t.me/iv_k2000?embed=1" allowfullscreen></iframe>
+        <div class="header">
+            <div class="logo">⚡ МОЛНІЯ ТВ</div>
+            <div class="subtitle">Цілодобовий анімаційний телеканал</div>
         </div>
 
-        <div class="info-panel">
-            <div class="status-badge">
-                <div class="live-dot"></div>
-                НА ЖИВО В ЕФІРІ
+        <div class="player-box">
+            <!-- Исправленный виджет на правильный юзернейм -->
+            <script async src="https://telegram.org/js/telegram-widget.js?22" data-telegram-post="molniyatv/live" data-width="100%"></script>
+        </div>
+
+        <div class="footer-action">
+            <div class="live-badge">
+                <span class="live-dot"></span> НА ЖИВО В ЕФІРІ
             </div>
-            <a href="https://t.me/iv_k2000" target="_blank" class="btn">Відкрити в Telegram</a>
+            <a href="https://t.me/molniyatv" target="_blank" class="btn">Відкрити в Telegram</a>
         </div>
     </div>
 
-    <footer>
-        &copy; 2026 Молнія ТВ. Усі права захищено.
-    </footer>
+    <div class="copyright">
+        © 2026 Молнія ТВ. Усі права захищено.
+    </div>
 
 </body>
 </html>
